@@ -8,6 +8,12 @@ app.get('/', (req, res) => {
   res.status(200).send("Welcome @hugooSoul")
 })
 
+app.get('/cources', (req, res) => {
+  var coupon = req.query.coupon
+  var source = req.query.source
+  res.send("Coupo: " + coupon + ", Source: " + source)
+})
+
 app.get('/users', (req, res) => {
   res.send(users)
 })
